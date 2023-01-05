@@ -10,7 +10,15 @@
  */
 
 const palindrome = (str) => {
-  
+  if (
+    str
+      .split("")
+      .reduce((accumulator, currentValue) => currentValue + accumulator) === str
+  ) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 module.exports = palindrome;

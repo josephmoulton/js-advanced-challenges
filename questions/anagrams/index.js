@@ -10,7 +10,13 @@
  */
 
 const anagrams = (strA, strB) => {
-  
-}
+  return cleanString(strA) === cleanString(strB);
+};
+
+const cleanString = (str) => {
+  return str.replaceAll(" ", "").toLowerCase().split("").sort().join("");
+};
+
+//sort on the array gives two anagrams the same string once its been sorted cat and act both equal act
 
 module.exports = anagrams;
